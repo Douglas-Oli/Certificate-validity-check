@@ -2,9 +2,10 @@
 Este script Bash foi criado para verificar a validade de certificados SSL de um domínio, permitindo sua integração como um plugin no Nagios.
 
 ## Informações
-Autor: Douglas Oli. Silva
-Email: contact@douglas-olis.com.br
-Data de Criação: 17/09/2024
+- Autor: Douglas Oli. Silva
+- Email: contact@douglas-olis.com.br
+- Data de Criação: 17/09/2024
+  
 ## Requisitos
 - Linux com bash
 - openssl
