@@ -35,12 +35,12 @@ days_until_expiration=$(( (expiration_epoch - current_epoch) / 86400 ))
 
 # Verifica o intervalo de validade do certificado
 if [[ "$days_until_expiration" -le 45 && "$days_until_expiration" -ge 10 ]]; then
-    echo "WARNING - $SERVER_NAME -O certificado expira em $days_until_expiration dias."
+    echo "WARNING - $SERVER_NAME - O certificado expira em $days_until_expiration dias - $expiration_date "
     exit 1
 elif [[ "$days_until_expiration" -le 10 ]]; then
-    echo "CRITICAL - $SERVER_NAME - O certificado expira em $days_until_expiration dias."
+    echo "CRITICAL - $SERVER_NAME - O certificado expira em $days_until_expiration dias - $expiration_date "
     exit 2
 else
-    echo "OK - $SERVER_NAME - O certificado é válido por mais de 45 dias. Validade atual: $days_until_expiration dias."
+    echo "OK - $SERVER_NAME - O certificado é válido por mais de 45 dias. Validade atual: $days_until_expiration dias - $expiration_date "
     exit 0
 fi
